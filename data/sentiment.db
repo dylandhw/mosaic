@@ -1,0 +1,12 @@
+CREATE TABLE sentiment_analysis (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    timestamp DATETIME,
+    headline TEXT,
+    sentiment_score REAL,
+    market_price REAL,
+    market_change_pct REAL,
+    symbol TEXT
+);
+
+CREATE INDEX idx_timestamp ON sentiment_analysis(timestamp);
+CREATE INDEX idx_symbol ON sentiment_analysis(symbol);
